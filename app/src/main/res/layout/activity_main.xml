@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context="com.skylinelin.singleselection.MainActivity">
+
+   <RadioGroup
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <RadioButton
+           android:id="@+id/radio_bt_spicy"
+           android:text="变态辣"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <RadioButton
+           android:id="@+id/radio_no_spicy"
+           android:text="不要辣"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <RadioButton
+           android:id="@+id/radio_wei_spicy"
+           android:text="微辣"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <RadioButton
+           android:id="@+id/radio_zhong_spicy"
+           android:text="中辣"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+   </RadioGroup>
+
+</RelativeLayout>

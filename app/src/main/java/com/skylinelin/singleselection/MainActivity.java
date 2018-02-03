@@ -3,6 +3,7 @@ package com.skylinelin.singleselection;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 /**
@@ -35,28 +36,39 @@ public class MainActivity extends AppCompatActivity {
         mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                String text = " ";
-                switch (checkedId) {
-                    case R.id.radio_bt_spicy:
-                        text = "变态辣";
-                        break;
-                    case R.id.radio_no_spicy:
-                        text = "不要辣";
-                        break;
-                    case R.id.radio_wei_spicy:
-                        text = "微辣";
-                        break;
-                    case R.id.radio_zhong_spicy:
-                        text = "中辣";
-                        break;
-                    default:
-                        break;
-
-                }
-                Log.d(TAG,text);
+                GuoLv(checkedId);
             }
         });
 
+
+    }
+
+    private void GuoLv(int checkedId) {
+        String text = " ";
+        switch (checkedId) {
+            case R.id.radio_bt_spicy:
+                text = "变态辣";
+                break;
+            case R.id.radio_no_spicy:
+                text = "不要辣";
+                break;
+            case R.id.radio_wei_spicy:
+                text = "微辣";
+                break;
+            case R.id.radio_zhong_spicy:
+                text = "中辣";
+                break;
+            default:
+                break;
+
+        }
+        Log.d(TAG,text);
+    }
+
+    public void dianji(View view) {
+
+        int checkedId = mRadioGroup.getCheckedRadioButtonId();
+        GuoLv(checkedId);
 
     }
 }

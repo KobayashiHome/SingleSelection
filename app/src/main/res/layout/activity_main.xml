@@ -8,8 +8,16 @@
     tools:context="com.skylinelin.singleselection.MainActivity">
 
    <RadioGroup
+       android:id="@+id/radio_group"
        android:layout_width="match_parent"
+       android:orientation="vertical"
        android:layout_height="wrap_content">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="选择是否要辣："
+           android:textSize="16dp"/>
        <RadioButton
            android:id="@+id/radio_bt_spicy"
            android:text="变态辣"

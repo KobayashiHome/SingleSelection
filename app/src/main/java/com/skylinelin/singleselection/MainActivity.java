@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
 /**
  * @author skylinelin
  * @date 2018/2/2
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mRadioZhongSpicy = findViewById(R.id.radio_zhong_spicy);
 
         //获取选中Id
-        int checkedId = mRadioGroup.getCheckedRadioButtonId();
+        //int checkedId = mRadioGroup.getCheckedRadioButtonId();
 
         mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         Log.d(TAG,text);
+        Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
     }
 
     public void dianji(View view) {
